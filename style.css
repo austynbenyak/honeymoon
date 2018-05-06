@@ -1,0 +1,40 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+
+body {
+  max-width: 2000px;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: visible;
+  margin: 0;
+  padding: 50px;
+  min-height: 100%;
+  font-family: 'Cantarell', sans-serif;
+}
+
+div, section, main, aside, header, footer {
+}
+
+@font-face {
+    font-family: 'heaveregular';
+    src: url('fonts/heave-regular-webfont.woff2') format('woff2'),
+         url('fonts/heave-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+::selection {
+  background: orange;
+}
+
+.container {
+  background-color: red;
+  height: 500px;
+}
+
+.item {
+  text-align: center;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>honeymoon</title>
+    <meta name="description" content="honeymoon">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#000000">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+
+<body>
+
+<header>
+
+    <a href="presspackage.html">
+    <div class="header-logo">
+    <img src="logos/honeymoon_h_logo.svg" alt="home">
+    </div>
+    </a>
+
+</header>
+    <div class="hero">
+    </div>
+
+<main>
+
+<h5>
+"the relationship of the vocals to the chords are pretty unique. i've never heard a group sound *quite* like this, but the individualism is subtle."
+</h5>
+
+</main>
+<div class="footer">
+© 2018 honeymoon all rights reserved
+</div>
+
+
+<!-- fonts -->
+<link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption:700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Cantarell" rel="stylesheet">
+<!-- styles -->
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+
+</html>

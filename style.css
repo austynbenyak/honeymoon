@@ -10,7 +10,7 @@ body {
   overflow-x: hidden;
   overflow-y: visible;
   margin: 0;
-  padding: 50px;
+  padding-bottom: 6rem;
   min-height: 100%;
   font-family: 'Cantarell', sans-serif;
 }
@@ -24,17 +24,405 @@ div, section, main, aside, header, footer {
          url('fonts/heave-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+
 }
 
 ::selection {
   background: orange;
 }
 
-.container {
-  background-color: red;
-  height: 500px;
+.nav-trigger {
+  padding-top: 1em;
+  padding-right: 40px;
+  z-index: 200;
+  display: inline-block;
+  float: right;
+  font-size: 18px;
+  letter-spacing: 1px;
 }
 
-.item {
-  text-align: center;
+@media screen and (min-width: 1200px)
+  {.nav-trigger {
+    padding-right: 300px;
+    font-size: 20px;
+  }
+	}
+
+.nav-trigger:after {
+  content:"menu";
 }
+
+.nav-trigger.close:after {
+    content: "close";
+}
+
+.nav-trigger.open {
+    color: black;
+}
+
+.nav-trigger.close {
+  color: black;
+  z-index: 1000;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  top: -115%;
+  height: 100vh;
+}
+
+
+nav.out {
+  pointer-events: none;
+}
+
+nav.in {
+  pointer-events: auto;
+}
+
+nav ul {
+  display: block;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+}
+
+nav ul {
+  height: 100%;
+  width: 100%;
+}
+
+nav li {
+  height: auto;
+  flex: 1;
+  position: relative;
+  background: white;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+@media screen and (min-width: 600px)
+  {nav li {
+    font-size: 32px;
+  }
+	}
+
+nav.in {
+    top: 0;
+    opacity: 1;
+}
+
+nav.in li {
+  opacity: 1;
+}
+
+.nav-label {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  margin-top: 0;
+}
+
+.hero {
+  background-image: url(photos/big_3_tall.jpg);
+  height: 400px;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -250px;
+}
+
+@media screen and (min-width: 600px)
+  {.hero {
+    height: 800px;
+    margin-top: -400px;
+  }
+	}
+
+  @media screen and (min-width: 1000px)
+    {.hero {
+      height: 1000px;
+      margin-top: -650px;
+    }
+  	}
+
+.header-logo {
+  margin-top: -37px;
+  padding-left: 20px;
+  width: 100px;
+  -o-object-fit: contain;
+  display: inline-block;
+}
+
+
+@media screen and (min-width: 600px)
+  {.header-logo {
+    padding-left: 230px;
+  }
+	}
+
+  @media screen and (min-width: 1000px)
+    {.header-logo {
+      padding-left: 400px;
+    }
+  	}
+
+main {
+  padding-left: 40px;
+  margin-right: 40px;
+}
+
+
+@media screen and (min-width: 600px)
+  {main {
+    padding-left: 250px;
+  }
+	}
+
+  @media screen and (min-width: 1000px)
+    {main {
+      padding-left: 400px;
+      margin-right: 200px;
+    }
+  	}
+
+
+h1{
+  font-size: 30px;
+  max-width: 300px;
+  line-height: 1.15;
+}
+
+@media screen and (min-width: 600px)
+  {h1 {
+    max-width: 400px;
+  }
+	}
+
+  @media screen and (min-width: 1000px)
+    {h1{
+      font-size: 48px;
+      max-width: 600px;
+    }
+  	}
+
+
+h2 {
+font-size: 18px;
+letter-spacing: 2px;
+font-family: 'PT Sans Caption', sans-serif;
+}
+
+@media screen and (min-width: 1000px)
+  {h2{
+    max-width: 600px;
+  }
+  }
+
+h3 {
+font-size: 24px;
+letter-spacing: 3px;
+font-weight: bold;
+}
+
+@media screen and (min-width: 1200px)
+  {h3{
+    font-size: 28px;
+  }
+  }
+
+h4 {
+font-size: 15px;
+font-family: 'PT Mono', monospace;
+}
+
+h5 {
+font-size: 20px;
+line-height: 1.5;
+width: 250px;
+letter-spacing: 1px;
+}
+
+@media screen and (min-width: 500px)
+  {h5{
+    width: 350px;
+  }
+  }
+
+  @media screen and (min-width: 900px)
+    {h5{
+      width: 500px;
+      font-size: 24px;
+    }
+    }
+
+h6 {
+  font-family: 'heaveregular';
+  font-size: 15px;
+  line-height: 1px;
+}
+
+h7 {
+  font-family: 'heaveregular';
+  font-size: 7vw;
+  line-height: 2px;
+}
+
+p {
+font-family: 'PT Sans Caption', sans-serif;
+font-size: 14px;
+line-height: 1.75;
+width: 250px;
+}
+
+@media screen and (min-width: 500px)
+  {P{
+    width: 350px;
+  }
+  }
+
+  @media screen and (min-width: 900px)
+    {P{
+      width: 500px;
+      font-size: 16px;
+    }
+    }
+
+img {
+  max-width: 100%;
+}
+
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: -1px;
+	width: 100%;
+	height: 85%;
+}
+
+.album-art {
+  border: 1px solid #e6e6e6;
+  line-height: 0;
+}
+
+@media screen and (min-width: 900px)
+  {.album-art {
+    width: 50%;
+  }
+  }
+
+
+ul {
+  list-style: none;
+  font-size: 14px;
+  line-height: 2.5;
+  padding: 0;
+  padding-right: 150px;
+}
+
+@media screen and (min-width: 1200px)
+  {ul{
+    font-size: 16px;
+  }
+  }
+
+table {
+  border-collapse: collapse;
+}
+
+tr {
+  border-bottom: 2px solid black;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 1200px)
+  {td{
+    font-size: 16px;
+  }
+  }
+
+td {
+  display: block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+@media screen and (min-width: 900px)
+{td {
+  display: table-cell;
+}
+}
+
+.ticket {
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+
+@media screen and (min-width: 1000px)
+{.show-table {
+  display: flex;
+  margin-left: -200px;
+}
+}
+
+.footer-logo {
+  max-width: 150px;
+  padding-top: 100px;
+}
+
+@media screen and (min-width: 600px)
+{.footer-contact {
+  display: flex;
+}
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  font-size: 9px;
+  letter-spacing: .15em;
+  padding-bottom: 10px;
+  font-weight: bold;
+  padding-left: 40px;
+}
+
+@media screen and (min-width: 600px)
+  {.footer {
+    padding-left: 250px;
+  }
+	}
+
+  @media screen and (min-width: 1000px)
+    {.footer {
+      padding-left: 400px;
+    }
+  	}
